@@ -303,7 +303,7 @@ define(function (require) {
             function numAscending (a, b) {
                 return -numDescending(a, b);
             }
-            if (serie.sort != 'none' || serie.sortData == true) {
+            if (serie.sort != 'none' && serie.sortData == true) {
                 funnelData.sort(serie.sort === 'descending' ? numDescending : numAscending);
             }
             
