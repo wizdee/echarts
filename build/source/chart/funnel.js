@@ -31,7 +31,7 @@ define('echarts/chart/funnel', [
         minSize: '0%',
         maxSize: '100%',
         sort: 'descending',
-        sort: true,
+        sortData: true,
         gap: 0,
         funnelAlign: 'center',
         itemStyle: {

@@ -46692,6 +46692,7 @@ define('zrender/zrender', [
         minSize: '0%',
         maxSize: '100%',
         sort: 'descending',
+        sortData: true,
         gap: 0,
         funnelAlign: 'center',
         itemStyle: {
