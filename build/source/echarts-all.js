@@ -46924,7 +46924,7 @@ define('zrender/zrender', [
             function numAscending(a, b) {
                 return -numDescending(a, b);
             }
-            if (serie.sort != 'none') {
+            if (serie.sort != 'none' || serie.sortData) {
                 funnelData.sort(serie.sort === 'descending' ? numDescending : numAscending);
             }
             return funnelData;

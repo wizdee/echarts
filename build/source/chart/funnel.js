@@ -31,6 +31,7 @@ define('echarts/chart/funnel', [
         minSize: '0%',
         maxSize: '100%',
         sort: 'descending',
+        sort: true,
         gap: 0,
         funnelAlign: 'center',
         itemStyle: {
@@ -263,7 +264,7 @@ define('echarts/chart/funnel', [
             function numAscending(a, b) {
                 return -numDescending(a, b);
             }
-            if (serie.sort != 'none') {
+            if (serie.sort != 'none' || serie.sortData) {
                 funnelData.sort(serie.sort === 'descending' ? numDescending : numAscending);
             }
             return funnelData;

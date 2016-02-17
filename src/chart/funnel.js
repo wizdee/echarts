@@ -31,6 +31,7 @@ define(function (require) {
         minSize: '0%',
         maxSize: '100%',
         sort: 'descending', // 'ascending', 'descending'
+        sortData: true,
         gap: 0,
         funnelAlign: 'center',
         itemStyle: {
@@ -302,7 +303,7 @@ define(function (require) {
             function numAscending (a, b) {
                 return -numDescending(a, b);
             }
-            if (serie.sort != 'none') {
+            if (serie.sort != 'none' || serie.sortData) {
                 funnelData.sort(serie.sort === 'descending' ? numDescending : numAscending);
             }
             
